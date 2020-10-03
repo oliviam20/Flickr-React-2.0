@@ -1,13 +1,13 @@
 # Flickr React App
 
-This uses the Flickr public api
+This uses the Flickr public api (you might need to install a [CORS chrome extension](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) to use the api)
 ```
 http://api.flickr.com/services/feeds/photos_public.gne
 ```
 
 [Live Demo 1 - Heroku](https://her-om-flkr.herokuapp.com/)
 
-[Live Demo 2 - Netlify](https://flickr-react-app.netlify.app/)
+[Live Demo 2 - Netlify - It's faster than Heroku 😉](https://flickr-react-app.netlify.app/)
 
 *note to myself* - deployed using cb86 account for heroku
 
