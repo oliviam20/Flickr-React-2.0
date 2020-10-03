@@ -1,68 +1,75 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Flickr React App
 
-## Available Scripts
+This uses the Flickr public api
+```
+http://api.flickr.com/services/feeds/photos_public.gne
+```
 
-In the project directory, you can run:
+[Live Demo 1 - Heroku](https://her-om-flkr.herokuapp.com/)
 
-### `yarn start`
+[Live Demo 2 - Netlify](https://flickr-react-app.netlify.app/)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+*note to myself* - deployed using cb86 account for heroku
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Deployment
 
-### `yarn test`
+Followed this [guide](https://github.com/mars/create-react-app-buildpack) to deploy a create-react-app to heroku.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Outcomes
 
-### `yarn build`
+1. Designed and implemented a responive web app.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Used React and Context for state management.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+3. Used ReactCSSTransitionGroup for transitions.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Can fetch images from the flickr API and used the `tags` query parameter to search the query, and display the results.
 
-### `yarn eject`
+5. The app can locally run and deployed.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+6. Tests return 100% passed!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## UI Design
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+I did a simple, clean, and responsive design.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The layout consists of:
 
-## Learn More
+- Logo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Search bar
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Gallery in Masonry tiles, from 4 - 1 columns depending on screen size.
 
-### Code Splitting
+- Toggle tags feature enabled on smaller screens.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- Loader and Error messages
 
-### Analyzing the Bundle Size
+## Testing
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Tests are done with `Jest` and `Enzyme`.
 
-### Making a Progressive Web App
+This combination was chosen because they are the most popular and are widely supported.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Issues
 
-### Advanced Configuration
+The api is blocked by CORS. Need to download a [chrome extension](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) to get around this.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Strangely during development, test coverage were hidden despite passing the `--coverage` flag to `test` script. After some research and experimenting, it was discovered that git was the culprit to causing test issues. After changes were committed (even a single time), it will break the tests. Given the project size and limited time, I created a new app and moved the files in order to resolve this issue quickly. (To see test coverage, you might need to create a new CRA and copy the files into the new CRA to test).
 
-### Deployment
+Some tests had to be split up into different files in order to get them to work. E.g. `action.test.js` and `fetcchImagesFail.test.js`. These are split because the pass and fail test will not work if the tests are in the same file.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Some tests were not picked up by the coverage report: 
+```
+store.test.js
 
-### `yarn build` fails to minify
+index.tests.js
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Another issue with testing is that the test suite throws an error when trying to mount/shallow `App`. The issue was that the `App.js` was in its own `App` folder. Tried to movie the file into `src` but it is still not resolved.
+
+## Other possible features
+
+1. Photo editor + download
+
+2. Social sharing options
