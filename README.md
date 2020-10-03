@@ -57,7 +57,7 @@ The api is blocked by CORS. Need to download a [chrome extension](https://chrome
 
 Strangely during development, test coverage were hidden despite passing the `--coverage` flag to `test` script. After some research and experimenting, it was discovered that git was the culprit to causing test issues. After changes were committed (even a single time), it will break the tests. Given the project size and limited time, I created a new app and moved the files in order to resolve this issue quickly. (To see test coverage, you might need to create a new CRA and copy the files into the new CRA to test).
 
-Some tests had to be split up into different files in order to get them to work. E.g. `action.test.js` and `fetcchImagesFail.test.js`. These are split because the pass and fail test will not work if the tests are in the same file.
+Some tests had to be split up into different files in order to get them to work. E.g. `action.test.js` and `fetchImagesFail.test.js`. These are split because the pass and fail test will not work if the tests are in the same file.
 
 Some tests were not picked up by the coverage report: 
 ```
