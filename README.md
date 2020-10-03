@@ -27,7 +27,7 @@ Followed this [guide](https://github.com/mars/create-react-app-buildpack) to dep
 
 5. The app can locally run and deployed.
 
-6. Tests return 100% passed!
+6. One of the requirements requires the app to update results as user types. Initially had api calls every time user makes changes but this impacted performance as it was calling the api multipl times in quick succession. Resolved this by using `debounce` from `lodash` to ["group multiple sequential calls in a single one"](https://css-tricks.com/debouncing-throttling-explained-examples/).
 
 ## UI Design
 
