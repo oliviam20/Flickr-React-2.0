@@ -29,6 +29,8 @@ Followed this [guide](https://github.com/mars/create-react-app-buildpack) to dep
 
 6. One of the requirements requires the app to update results as user types. Initially had api calls every time user makes changes but this impacted performance as it was calling the api multipl times in quick succession. Resolved this by using `debounce` from `lodash` to ["group multiple sequential calls in a single one"](https://css-tricks.com/debouncing-throttling-explained-examples/).
 
+7. All interactive elements are keyboard accessible.
+
 ## UI Design
 
 I did a simple, clean, and responsive design.
