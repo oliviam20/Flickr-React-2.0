@@ -3,8 +3,6 @@ import React from 'react';
 import Button from '../components/Button/Button';
 import InputText from '../components/InputText/InputText';
 import Search from '../components/Search/Search';
-// import { clearImages } from '../actions/index';
-import * as action from '../actions/index';
 
 const mockFn = jest.fn();
 const defaultProps = {
