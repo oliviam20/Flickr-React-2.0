@@ -29,15 +29,6 @@ describe('InputText', () => {
 
   it('should call onHandleChange on change', () => {
     wrapper.find('input').simulate('change', { target: { name: 'name', value: '123' } });
-    console.log(wrapper.debug())
     expect(defaultProps.onHandleChange).toHaveBeenCalledTimes(2);
   });
-
-  // it('should have correct value on change', () => {
-  //   const event = { target: { value: 'teddy' } };
-  //   const input = wrapper.find('input');
-  //   input.simulate('change', event);
-  //   console.log(input.debug())
-  //   expect(wrapper.find('input').prop('value')).toEqual('teddy');
-  // });
 });
