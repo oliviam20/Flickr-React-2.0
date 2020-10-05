@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://api.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=true&tags=';
+const API_URL = 'https://cors-anywhere.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=true&tags=';
 
 const CLEAR_IMAGES = 'CLEAR_IMAGES';
 const LOAD_IMAGES = 'LOAD_IMAGES';
