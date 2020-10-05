@@ -22,7 +22,7 @@
     column-count: 4;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-xl) {
     width: $desktop-xl;
   }
 }
