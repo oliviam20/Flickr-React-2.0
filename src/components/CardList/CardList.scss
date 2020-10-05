@@ -6,6 +6,7 @@
   max-width: 768px;
   column-gap: 1.5rem;
   column-count: 1;
+  overflow: hidden;
 
   @media (min-width: $mobile) {
     column-count: 2;

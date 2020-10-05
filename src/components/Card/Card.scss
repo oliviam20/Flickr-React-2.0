@@ -16,6 +16,7 @@
 
   figcaption {
     padding: 1rem;
+    overflow: hidden;
 
     .toggle-tags-wrapper {
       @media (min-width: $mobile) {
