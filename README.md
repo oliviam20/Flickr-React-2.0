@@ -69,7 +69,7 @@ store.test.js
 index.tests.js
 ```
 
-Another issue with testing is that the test suite throws an error when trying to mount/shallow `App`. The issue was that the `App.js` was in its own `App` folder. Tried to movie the file into `src` but it is still not resolved.
+Another issue with testing is that the test suite throws an error when trying to mount/shallow `App`. The issue was that the `App.js` was in its own `App` folder. Tried to move the file into `src` but it is still not resolved.
 
 ## Other possible features
 
