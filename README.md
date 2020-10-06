@@ -56,7 +56,7 @@ This combination was chosen because they are the most popular and are widely sup
 
 ## Issues
 
-The api is blocked by CORS. To get around this, I used a open source service [cors anywhere](https://flickr-react-app.netlify.app/) to get around this issue. If the issue still persists, you might need to download a [chrome extension](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) to get around this.
+The api is blocked by CORS. To get around this, I used an open source service [cors anywhere](https://flickr-react-app.netlify.app/) to get around this issue. If the issue still persists, you might need to download a [chrome extension](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) to get around this.
 
 Strangely during development, test coverage were hidden despite passing the `--coverage` flag to `test` script. After some research and experimenting, it was discovered that git was the culprit to causing test issues. After changes were committed (even a single time), it will break the tests. Given the project size and limited time, I created a new app and moved the files in order to resolve this issue quickly. (To see test coverage, you might need to create a new CRA and copy the files into the new CRA to test).
 
